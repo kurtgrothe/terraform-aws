@@ -1,0 +1,35 @@
+/* 
+Files ending in tf are Terraform configuration files or Terraform manifest
+ Files can end in tf.json also, not common though. 
+ Terraform Settings
+ Ran on 3/27/2025 created: i-0220417765f5a6f6c
+
+ Argument Reference: for required arguments vs optional
+ Attribute Reference:  
+
+ Fundamental Blocks:
+ Terraform: required providers, backend, behaviors
+ Provider: Heart of tf. Relies on providers to interact with remote systems. Belong to root module
+ Resource: Infrastructure objects, resource syntax  (declaration), behavior and provosioners
+
+tf blocks only use constanct values, no references or tf functions
+ */
+terraform {
+  required_providers {    
+    aws = {
+        source = "registry.terraform.io/hashicorp/aws"
+    }
+  }
+}
+
+# Provision Block
+provider "aws" {
+    profile = "default"  # AWS creds on local machine
+    region = "us-west-2"
+}
+
+# Resource Block
+resource "aws_instance" "ec2-awsRHEL" {
+    ami = "ami-0f9d441b5d66d5f31"
+    instance_type = "t2.micro"  
+}

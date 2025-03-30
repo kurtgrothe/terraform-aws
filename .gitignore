@@ -1,0 +1,83 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+*.tfvars.json
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Helm
+charts/*.tgz
+Chart.lock
+*.lock
+helmfile*.yaml
+
+# Ansible
+*.retry
+*.log
+*.swp
+inventory.ini
+inventory/
+ansible.cfg
+ansible.log
+host_vars/
+group_vars/
+
+# RHEL/Linux artifacts
+*.rpm
+*.tar.gz
+*.tar.bz2
+*.log
+*.bak
+*.tmp
+.DS_Store
+**/.DS_Store
+**/*~
+
+# IDE files (Optional but common)
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sw?
+*.pyc
+__pycache__/
+
+# General sensitive information
+*.pem
+*.key
+*.crt
+*.cer
+*.pub
+*.p12
+*.pfx
+*.ovpn
+*.asc
+*.gpg
+*.jks
+*.keystore
+secrets.yaml
+secrets.yml
+credentials.yml
+*.secret
+
+# AWS specific
+.aws/
+aws-credentials
+aws-exports.js
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+temp/
+tmp/
