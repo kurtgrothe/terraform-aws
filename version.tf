@@ -12,6 +12,6 @@ terraform {
 
 # Provider Block (Configures the AWS provider)
 provider "aws" {
-  region = "us-west-2"
+  region = var.aws_region
   # access_key, secret_key, or profile are configured locally or via environment variables
 }
